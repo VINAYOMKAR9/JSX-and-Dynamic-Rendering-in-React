@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+  </head>
+  
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // Your JSX code here
+      function App(){
+        let bol= true;
+        let val1='Seize the day in True statement '
+        let val2='Seize the day in false statement '
+        return <div id='container' style={{width:'600px',height:'150px',border:'1px solid red',margin:'auto'}}>
+          {bol?<p>{val1}</p>:<p>{val2}</p>}
+          </div>
+      }
+      let element = <App/>
+      let reactRoot= ReactDOM.createRoot(document.getElementById('root'))
+      reactRoot.render(element)
+        
+
+
+
+    </script>
+  </body>
+</html>
